@@ -1,0 +1,26 @@
+<!-- cria a página (todos os membrso) com os dados comuns a todas as paginas html do aplicativo -->
+{% extends 'master.html' %}
+
+<!-- Cria o titulo desta página -->
+{% block title %} My Tennis Club - List of all members {% endblock %}
+
+<!-- cria o conteúdo desta página -->
+{% block content %}
+<p><a href="/">Home</a></p>
+<h1>Members</h1>
+<ul>
+  <!-- loop para percorrer o array com os nomes dos membros cadastrados -->
+  {% for x in mymembers %}
+  <li>
+    <!-- na página details pelo id exiba os nomes cadastrados-->
+    <h3>
+      <a href="details/{{ x.id }}">{{ x.firstName }} {{ x.lastName }}</a>
+    </h3>
+    <!-- end lista -->
+  </li>
+  <!-- end for -->
+  {% endfor %}
+  <!-- end ul -->
+</ul>
+<!-- end bçoco conteúdo -->
+{% endblock %}
