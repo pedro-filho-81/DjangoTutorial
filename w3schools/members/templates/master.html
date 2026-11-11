@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- espaço para cria o título da página -->
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+  <body>
+    <!-- 
+        Eles são apenas substitutos, dizendo a Django 
+        para substituir esse bloco por conteúdo 
+        de outras fontes. 
+        
+    -->
+    {% block content %}
+    <!--Espaço para adicionar o conteúdo da página.-->
+    {% endblock %}
+  </body>
+</html>
